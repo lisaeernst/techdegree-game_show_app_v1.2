@@ -125,8 +125,8 @@ const hearts =  document.querySelectorAll(".tries img");
       }
       checkWin(); 
     }
-   /*  reset(); */
-  });
+    reset();
+  }); 
 
 function checkWin () {
   const show = document.querySelectorAll('.show'); // letters have matched show these letters checkletter function
@@ -135,14 +135,19 @@ function checkWin () {
     hideOverlay.classList.add("win");
     title.textContent = 'You Have Won!';
     hideOverlay.style.display = 'flex';
+  } else if (missed > 4) {
+    hideOverlay.classList.add("lose");
+    title.textContent = 'Sorry, please try again.';
+    hideOverlay.style.display = 'flex';
   }
 
 }
 
-/*
-function reset () {
 
+function reset() {
+  startButton.textContent = 'Try Again';
+  //if you have the win or lose overlay show the reset button
+  startButton.addEventListener("click", ()  => {
+    window.location.reload();
+  });
 }
-
-*/
-
