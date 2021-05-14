@@ -4,12 +4,12 @@
 /* Variables */
 
 :root {
-  --color-win: #516753;
-  --color-lose: #d94545;
-  /*  --color-start: #5b85b7; */
-  --color-head: #5c7fcc;
+  --color-win: linear-gradient(62deg, #e8a635 0%, #f7ce68 50%, #e8a635 100%);
+  --color-lose: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  --color-start: linear-gradient(90deg, #4177a8 0%, #82c0f9 0%, #82c0f9 0%, #2367a4 100%);
+  --color-head: #4f6daf;
   --color-neutral: #445069;
-  --color-neutral-light: #d2d2d2;
+  --color-neutral-light: #dbdddf;
   --color-keys: #37474f;
   --color-keys-light: #e5e5e5;
   --font-size-large: 60px;
@@ -28,6 +28,19 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 li,
@@ -43,6 +56,10 @@ h2 {
   font-family: "Open Sans", sans-serif;
   font-size: var(--font-size-large);
   margin: 0;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 button {
@@ -76,6 +93,11 @@ button {
 
 .header {
   color: var(--color-head);
+
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Phrase */
@@ -144,49 +166,30 @@ button {
 }
 
 .start {
-  /* background-color: var(--color-start); */
-  /* background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(228, 140, 25, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  ); */
-  /* background: linear-gradient(
-    90deg,
-    rgba(65, 119, 168, 1) 0%,
-    rgba(130, 192, 249, 1) 51%,
-    rgba(35, 103, 164, 1) 100%
-  ); */
-
-  background: linear-gradient(
-    90deg,
-    rgba(65, 119, 168, 1) 0%,
-    rgba(130, 192, 249, 1) 40%,
-    rgba(130, 192, 249, 1) 60%,
-    rgba(35, 103, 164, 1) 100%
-  );
+  background: var(--color-start);
 }
 
 .start a {
-  color: var(--color-win);
+  color: var(--color-neutral);
 }
 
 .win {
-  background-color: var(--color-win);
+  background: var(--color-win);
 }
 
 .win a {
-  color: var(--color-win);
+  color: var(--color-neutral);
   box-shadow: 1px 6px 5px 1px rgb(0, 0, 0, 51%);
 }
 
 .lose {
-  background-color: var(--color-lose);
+  background: var(--color-lose);
 }
 
 .lose a {
-  color: var(--color-lose);
+  color: var(--color-neutral);
 }
+
 /* styles to shake the letters when they appear on the board */
 
 .show {

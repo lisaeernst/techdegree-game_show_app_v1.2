@@ -144,5 +144,6 @@ function reset() {
   //if you have the win or lose overlay show the reset button
   startButton.addEventListener("click", ()  => {
     window.location.reload();
+   
   });
 }
