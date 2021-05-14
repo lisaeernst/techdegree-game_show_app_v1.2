@@ -41,11 +41,6 @@ const phrases = [
 ];
 
 
-
-
-
-
-
 /* Function to randomly choose a phrase from the phrases array. Split the phrase into a new array
 of characters then return the new character array */
 
