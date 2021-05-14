@@ -37,7 +37,7 @@ const phrases = [
     'piece of cake', 
     'tip of the iceberg', 
     'cool as a cucumber' ,
-    'raining cats and dogs'
+    'fit as a fiddle'
 ];
 
 
@@ -140,7 +140,7 @@ function checkWin () {
 
 
 function reset() {
-  startButton.textContent = 'Try Again';
+  startButton.textContent = 'Reset The Game';
   //if you have the win or lose overlay show the reset button
   startButton.addEventListener("click", ()  => {
     window.location.reload();
