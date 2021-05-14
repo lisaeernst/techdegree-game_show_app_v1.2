@@ -1,4 +1,4 @@
-/* Get the element with the ID of querty and save it to a variable */
+/* Get the element with the ID of qwerty and save it to a variable */
 const keyboardQuerty = document.getElementById('qwerty');
 
 /* Get the element with the ID of phrase and save it to a variable */
@@ -52,7 +52,7 @@ function getRandomPhraseAsArray(arr){
    
 } 
 
-// call the getRandomPhraseAsArray function passing the phrases array as an argument into it
+
 const splitString = getRandomPhraseAsArray(phrases);
 
 
@@ -77,21 +77,13 @@ function addPhraseToDisplay(arr){
 }
 addPhraseToDisplay(splitString); 
 
-// from office hours session 
 
-/* we have to check for the user's keyboard selection to match one of the letters in the 
-phrase. Store this selection in the match variable which has a default value of null. 
 
-*/
-
-/* 
-* letters changed to splitString since this is the array of single letters
-* use SplitString to calculate the length of the phrases letters
-* 
-*
-*/
 const letters = document.querySelectorAll('.letter');
 
+
+// make sure the letters are lowercase, also use their length to check and run through the phrases letters
+// give the correct letters a class of show, the matched variable is updated
 const checkLetter = (button) => {
     let matched = null;
     for (i = 0; i < letters.length; i++) {
@@ -105,6 +97,14 @@ const checkLetter = (button) => {
   };
 
 const hearts =  document.querySelectorAll(".tries img");
+
+
+// event listener on the keyboard using the click event on the keyboard in the game
+// adding the class of chosen on the key that's pressed store these values in the variable match
+// check if match equals null then replace one of the full hearts with the empty heart image
+// increment by 1 each time up to the 5 missed hearts
+
+//calling the checkwin and the reset functions here as well when they are needed
 
   keyboardQuerty.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
@@ -123,6 +123,14 @@ const hearts =  document.querySelectorAll(".tries img");
     reset();
   }); 
 
+// using the length property to check if the value of the two variables are the same
+// create the overlay by adding the class of win to the start overlay, update the headline and change the
+// display property to flex 
+// or if  (the value in the missed variable is greater than 4) create the overlay an add the class of lose
+// change the headline to display the sorry message
+// change the display property of the overlay to flex
+
+
 function checkWin () {
   const show = document.querySelectorAll('.show'); // letters have matched show these letters checkletter function
   let title = document.querySelector('.title');  // grabbing the title of the overlay 
@@ -130,19 +138,22 @@ function checkWin () {
     hideOverlay.classList.add("win");
     title.textContent = 'You Have Won!';
     hideOverlay.style.display = 'flex';
+    
   } else if (missed > 4) {
     hideOverlay.classList.add("lose");
     title.textContent = 'Sorry, please try again.';
     hideOverlay.style.display = 'flex';
+    
   }
 
 }
 
-
+// adds the reload function to the game to refesh the page back to start
 function reset() {
   startButton.textContent = 'Reset The Game';
   //if you have the win or lose overlay show the reset button
   startButton.addEventListener("click", ()  => {
+    hideOverlay.style.display = 'flex';
     window.location.reload();
    
   });
