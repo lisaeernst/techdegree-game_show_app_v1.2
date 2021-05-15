@@ -151,7 +151,7 @@ function checkWin () {
 // adds the reload function to the game to refesh the page back to start
 function reset() {
   startButton.textContent = 'Reset The Game';
-  //if you have the win or lose overlay show the reset button
+ 
   startButton.addEventListener("click", ()  => {
     hideOverlay.style.display = 'flex';
     window.location.reload();
