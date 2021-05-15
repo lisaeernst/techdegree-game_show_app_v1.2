@@ -68,9 +68,9 @@ function addPhraseToDisplay(arr){
         phraseUl.appendChild(li);
         li.textContent = arr[i]; // adding the text content as a seperate li element
     if (arr[i] === ' ') {
-      li.classList.add("space"); // this is for the spaces
+      li.classList.add("space"); // this class is for the spaces
     } else {
-        li.classList.add("letter");
+        li.classList.add("letter"); // give the class of letter to the letters
     }
     }
 
@@ -99,12 +99,12 @@ const checkLetter = (button) => {
 const hearts =  document.querySelectorAll(".tries img");
 
 
-// event listener on the keyboard using the click event on the keyboard in the game
-// adding the class of chosen on the key that's pressed store these values in the variable match
+// event listener on the keyboard using the click event
+// adding the class of chosen on the key that's pressed, store these values in the variable
 // check if match equals null then replace one of the full hearts with the empty heart image
 // increment by 1 each time up to the 5 missed hearts
 
-//calling the checkwin and the reset functions here as well when they are needed
+//calling the checkwin and the reset functions here as well
 
   keyboardQuerty.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
