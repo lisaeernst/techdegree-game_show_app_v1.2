@@ -11,7 +11,7 @@
   --color-neutral: #445069;
   --color-neutral-light: #dbdddf;
   --color-keys: #37474f;
-  --color-keys-light: #e5e5e5;
+  --color-keys-light: #79a3ff;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all 0.2s ease-in-out;
@@ -61,7 +61,10 @@ h2 {
     0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
     0 20px 20px rgba(0, 0, 0, 0.15);
 }
-
+button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
 button {
   margin: 6px;
   border: 1px solid transparent;
