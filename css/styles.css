@@ -137,7 +137,7 @@ button {
   background: var(--color-neutral);
   border-radius: 5px;
   font-size: var(--font-size-medium);
-  color: #ffffff;
+  color: #000;
 }
 
 .btn__reset {
