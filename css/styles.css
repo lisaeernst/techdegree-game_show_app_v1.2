@@ -189,7 +189,7 @@ button {
 }
 
 .win a {
-  color: var(--color-neutral);
+  color: var(--color-btnfont);
   box-shadow: 1px 6px 5px 1px rgb(0, 0, 0, 51%);
 }
 
