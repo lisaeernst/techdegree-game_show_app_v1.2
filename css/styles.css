@@ -10,8 +10,8 @@
   --color-head: #4f6daf;
   --color-neutral: #445069;
   --color-neutral-light: #dbdddf;
-  --color-keys: #37474f;
-  --color-keys-light: #79a3ff;
+  --color-keys: #000;
+  --color-keys-light: #75a1e2;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all 0.2s ease-in-out;
