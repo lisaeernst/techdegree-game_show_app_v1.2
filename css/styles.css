@@ -198,7 +198,7 @@ button {
 }
 
 .lose a {
-  color: var(--color-neutral);
+  color: var(--color-btnfont);
 }
 
 /* styles to shake the letters when they appear on the board */
