@@ -11,7 +11,7 @@
   --color-neutral: #9f2dce;
   --color-neutral-light: #dbdddf;
   --color-keys: #fff;
-  --color-btn-font: #000;
+  --color-btnfont: #000;
   --color-keys-light: #7183de;
   --font-size-large: 60px;
   --font-size-medium: 20px;
@@ -181,7 +181,7 @@ button {
 }
 
 .start a {
-  color: var(--color-btn-font);
+  color: var(--color-btnfont);
 }
 
 .win {
